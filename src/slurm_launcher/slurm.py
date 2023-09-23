@@ -84,11 +84,13 @@ def main():
                 return
             print("Invalid response.")
 
-    with tempfile.NamedTemporaryFile("w", delete=False, suffix=".sh") as f:
+    with tempfile.NamedTemporaryFile("w", suffix=".sh") as f:
         f.write(slurm_script)
         temp_filename = f.name
+        result = subprocess.run(
+            ["sbatch", temp_filename], check=True, capture_output=True
+        )
 
-    result = subprocess.run(["sbatch", temp_filename], check=True, capture_output=True)
     print(result.stdout)
     print(result.stderr)
 
