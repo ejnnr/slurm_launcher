@@ -1,0 +1,11 @@
+LICENSE
+pyproject.toml
+setup.py
+src/slurm_launcher/__init__.py
+src/slurm_launcher/slurm.py
+src/slurm_launcher.egg-info/PKG-INFO
+src/slurm_launcher.egg-info/SOURCES.txt
+src/slurm_launcher.egg-info/dependency_links.txt
+src/slurm_launcher.egg-info/entry_points.txt
+src/slurm_launcher.egg-info/requires.txt
+src/slurm_launcher.egg-info/top_level.txt

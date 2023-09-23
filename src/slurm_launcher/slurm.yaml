@@ -1,0 +1,23 @@
+script:
+  # Default arguments to pass to the script to be run. Multiple values can be given
+  # separated by commas.
+
+  # model: cnn
+  # data: cifar10
+  # batch_size: 128,256
+slurm:
+  # Enter default Slurm arguments here. All arguments accepted by `sbatch` should work,
+  # e.g.:
+  output: slurm/%A_%a.out
+
+  # mem: 8gb
+  # time: 1:00:00
+  # cpus-per-task: 4
+launcher:
+  # The preamble can contain bash code that will be run before the main command
+  preamble: |
+
+  # The command prefix will be prepended to whatever the user gives as the main command
+  cmd_prefix: "srun python -m "
+  # Show generated Slurm script and confirm before submitting
+  confirm: true
