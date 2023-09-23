@@ -24,6 +24,3 @@ slurm_launcher = "slurm_launcher.slurm:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.setuptools.package-data]
-slurm_launcher = ["*.yaml"]
